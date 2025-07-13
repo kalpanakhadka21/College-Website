@@ -1,5 +1,6 @@
 // src/components/NoticeTable.jsx
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const notices = [
   {
@@ -51,6 +52,14 @@ const notices = [
 
 const Notice = () => {
   return (
+    <div>
+      <div className='bg-blue-600 p-2 text-center mt-3 w-24 rounded-xl font-bold text-xl text-white ml-[1000px] hover:bg-yellow-400'>
+      <NavLink >
+        Admin
+      </NavLink>
+      </div>
+      
+   
     <div className="container mx-auto p-6">
       <h2 className="text-2xl font-bold mb-4 text-center">Notice Board</h2>
       <table className="min-w-full bg-white border border-gray-300 shadow-md rounded-lg overflow-hidden">
@@ -80,6 +89,7 @@ const Notice = () => {
         </tbody>
       </table>
     </div>
+     </div>
   );
 };
 

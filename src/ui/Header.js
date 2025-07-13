@@ -25,7 +25,8 @@ const Header =()=> {
         as="li"
         variant="small"
         color="white"
-        className="p-1 font-bold text-2xl"
+        className="p-1 font-bold text-2xl hover:bg-white hover:text-black hover:p-2"
+
       >
         <NavLink to='/Home'>
           Home
@@ -35,7 +36,7 @@ const Header =()=> {
          as="li"
         variant="small"
         color="white"
-        className="p-1 font-bold text-2xl"
+        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
       >
         <NavLink to='/Program'>
          Program
@@ -45,7 +46,7 @@ const Header =()=> {
          as="li"
         variant="small"
         color="white"
-        className="p-1 font-bold text-2xl"
+        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
       >
         <NavLink to='/Staff'>
           Staff Details
@@ -55,7 +56,7 @@ const Header =()=> {
         as="li"
         variant="small"
         color="white"
-        className="p-1 font-bold text-2xl"
+        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
       >
         <NavLink to='/Admission'>
           Admission Form
@@ -65,7 +66,7 @@ const Header =()=> {
         as="li"
         variant="small"
         color="white"
-        className="p-1 font-bold text-2xl"
+        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
       >
         <NavLink to='/Notice'>
           Notice
@@ -75,7 +76,7 @@ const Header =()=> {
          as="li"
         variant="small"
         color="white"
-        className="p-1 font-bold text-2xl"
+        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
       >
         <NavLink to='/Syllabus'>
           Syllabus
@@ -85,7 +86,7 @@ const Header =()=> {
          as="li"
         variant="small"
         color="white"
-        className="p-1 font-bold text-2xl"
+        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
       >
         <NavLink to='/about'>
         About Us
