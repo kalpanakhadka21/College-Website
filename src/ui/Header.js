@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   MobileNav,
@@ -6,11 +6,20 @@ import {
  
 } from "@material-tailwind/react";
 import { NavLink } from "react-router";
-import logo from './images/logo.png'
 
-import animation from './images/animation.gif'
 const Header =()=> {
   const [openNav, setOpenNav] = React.useState(false);
+  
+   const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
+     const handleProgramsMouseEnter = () => {
+    setProgramsDropdownOpen(true);
+  };
+
+  const handleProgramsMouseLeave = () => {
+    setProgramsDropdownOpen(false);
+  };
+
+  
  
   React.useEffect(() => {
     window.addEventListener(
@@ -32,26 +41,63 @@ const Header =()=> {
           Home
         </NavLink>
       </Typography>
-      <Typography
-         as="li"
-        variant="small"
-        color="white"
-        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
+      
+
+ <div
+        className="relative"
+        onMouseEnter={handleProgramsMouseEnter}
+        onMouseLeave={handleProgramsMouseLeave}
       >
-        <NavLink to='/Program'>
-         Program
-        </NavLink>
-      </Typography>
-      <Typography
-         as="li"
-        variant="small"
-        color="white"
-        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
+        <Typography
+          as="li"
+          variant="small"
+          color="white"
+          className="text-2xl  font-bold mt-1 hover:bg-white hover:text-black cursor-pointer"
+        >
+          Programs
+        </Typography>
+        {programsDropdownOpen && (
+          <ul className="absolute top-full z-20 mt-2 bg-white text-black shadow-lg p-2 rounded-lg w-40">
+            <li className="hover:bg-primary hover:text-gray-400 p-2 rounded">
+              <NavLink to="/IT">Diploma in IT</NavLink>
+            </li>
+            <li className="hover:bg-primary hover:text-gray-400 p-2 rounded">
+              <NavLink to="/Vet">Diploma in Animal Science</NavLink>
+            </li>
+            <li className="hover:bg-white hover:text-gray-400 p-2 rounded">
+              <NavLink to="/Plant">Diploma in Plant Science</NavLink>
+            </li>
+           
+          </ul>
+        )}
+      </div>
+
+     <div
+        className="relative"
+        onMouseEnter={handleProgramsMouseEnter}
+        onMouseLeave={handleProgramsMouseLeave}
       >
-        <NavLink to='/Staff'>
+        <Typography
+          as="li"
+          variant="small"
+          color="white"
+          className="text-2xl  font-bold mt-1 hover:bg-white hover:text-black cursor-pointer"
+        >
           Staff Details
-        </NavLink>
-      </Typography>
+        </Typography>
+        {programsDropdownOpen && (
+          <ul className="absolute top-full z-20 mt-2 bg-white text-black shadow-lg p-2 rounded-lg w-40">
+            <li className="hover:bg-primary hover:text-gray-400 p-2 rounded">
+              <NavLink to="/Administrative">Administrator</NavLink>
+            </li>
+            <li className="hover:bg-primary hover:text-gray-400 p-2 rounded">
+              <NavLink to="/Instructor">Instructor</NavLink>
+            </li>
+           
+           
+          </ul>
+        )}
+      </div>
       <Typography
         as="li"
         variant="small"
@@ -76,51 +122,50 @@ const Header =()=> {
          as="li"
         variant="small"
         color="white"
-        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
+        className="p-1 font-bold  text-2xl  hover:bg-white hover:text-black hover:p-2"
       >
         <NavLink to='/Syllabus'>
           Syllabus
         </NavLink>
       </Typography>
-       <Typography
-         as="li"
-        variant="small"
-        color="white"
-        className="p-1 font-bold text-2xl  hover:bg-white hover:text-black hover:p-2"
+      <div
+        className="relative"
+        onMouseEnter={handleProgramsMouseEnter}
+        onMouseLeave={handleProgramsMouseLeave}
       >
-        <NavLink to='/about'>
-        About Us
-        </NavLink>
-      </Typography>
+        <Typography
+          as="li"
+          variant="small"
+          color="white"
+          className="text-2xl mt-2 font-bold  hover:bg-white hover:text-black cursor-pointer"
+        >
+          About
+        </Typography>
+        {programsDropdownOpen && (
+          <ul className="absolute top-full z-20 mt-2 bg-white text-black shadow-lg p-2 rounded-lg w-40">
+            <li className="hover:bg-primary hover:text-gray-400 p-2 rounded">
+              <NavLink to="/Principal">Principal Message</NavLink>
+            </li>
+            <li className="hover:bg-primary hover:text-gray-400 p-2 rounded">
+              <NavLink to="/Rpi">Rpi brief</NavLink>
+            </li>
+            
+           
+          </ul>
+        )}
+      </div>
     </ul>
   );
  
   return (
-    <div>
-      <div className="flex gap-20">
-       
-      <div>
-        <img className="h-36 w-36- mt-10 ml-44 " src={logo} alt="logo"/>
-      </div>
-      <div className="text-center ml-36 mt-10 ">
-        <h1 className="text-red-600 font-bold ">'सिप हुन्छ हातमा,रोजगारी साथमा'</h1>
-        <h1 className="text-blue-400 font-bold ">प्राविधिक शिक्षा तथा व्यवसायिक तालिम परिषद्</h1>
-        <h1 className="text-blue-600 font-bold text-3xl">रोल्पा बहुप्राविधिक शिक्षालय</h1>
-        <h1 className="text-blue-400 font-bold">रोल्पा न.पा. १- मेवाङ् रोल्पा </h1>
-      </div>
-      <div>
-       <img className="h-36 w-32 ml-40 mt-5" src={animation} alt="flag"/>
-      </div>
-      </div>
-      <div className="bg-pink-50 text-center p-1 mt-6">
-        <marquee>ROLPA POLYTECHNIC INSTITUTE ROLPA RURAL MUNICIPALITY -1 MEWANG ROLPA</marquee>
-      </div>
-    <div className="-m-6 max-h-[768px] w-[calc(100%+48px)] overflow-scroll ">
-      <Navbar className="sticky mt-6 top-0 bg-blue-900 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+    <div className="sticky top-0">
+    
+    <div className="-m-6 max-h-[768px] w-[calc(100%+48px)] ">
+      <Navbar className="sticky mt-6 top-0 bg-blue-900  h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
         <div className="flex items-center justify-between text-blue-gray-900">
            
           <div className="flex items-center gap-4">
-            <div className="mr-4 hidden lg:block">{navList}</div>
+            <div className="">{navList}</div>
            
             
           </div>

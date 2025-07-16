@@ -54,7 +54,7 @@ const Notice = () => {
   return (
     <div>
       <div className='bg-blue-600 p-2 text-center mt-3 w-24 rounded-xl font-bold text-xl text-white ml-[1000px] hover:bg-yellow-400'>
-      <NavLink >
+      <NavLink to='/Admin' >
         Admin
       </NavLink>
       </div>

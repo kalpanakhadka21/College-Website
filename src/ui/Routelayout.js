@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router'
 import Header from './Header'
 import Footer from './Footer'
+import Top from './Top'
 
 
 
@@ -9,6 +10,7 @@ import Footer from './Footer'
 const Routelayout = () => {
   return (
     <div>
+      <Top/>
      <Header/>
      <Outlet/>
      <Footer/>
