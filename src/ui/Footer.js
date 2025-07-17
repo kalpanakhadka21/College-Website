@@ -8,11 +8,17 @@ const SITEMAP = [
   
   {
     title: "Important Links",
-    links: ["CTEVT Central office", "CTEVT exam", "CTEVT lumbini office State"],
+    links: [<a href="https://ctevt.org.np/" rel="#" className=" hover:text-yellow-600 hover:underline"> CTEVT Central office </a>,
+      <a href="https://itms.ctevt.org.np:5580/" rel="#" className="  hover:text-yellow-600 hover:underline">CTEVT exam</a>,
+      <a href="https://www.ctevtp5.org.np/" rel="#"className=" hover:text-yellow-600 hover:underline"> CTEVT Lumbini Office States</a>
+    ],
   },
   {
     title: "Follow us",
-    links: ["Facebook", "Tiktok ", "YouTube", "Whatsapp"],
+    links: [<a href="https://www.facebook.com/rolpapolytechnic"rel="#"  className=" hover:text-yellow-600 hover:underline">Facebook</a>,
+       <a href="https://www.tiktok.com/@rolpa.polytechnic_" rel="#"  className=" hover:text-yellow-600 hover:underline"> Tiktok</a> ,
+        <a href="#" rel="#">YouTube</a>,
+         <a href="#" rel="#">Whatsapp</a>],
   },
 ];
  
@@ -109,6 +115,7 @@ const Footer=()=> {
           
           
         </div>
+        
     </footer>
   );
 }

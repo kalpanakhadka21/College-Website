@@ -51,7 +51,7 @@ const [staffDropdownOpen, setStaffDropdownOpen] = useState(false);
         className="p-1 font-bold text-2xl hover:bg-white hover:text-black hover:p-2"
 
       >
-        <NavLink to='/Home'>
+        <NavLink to='/'>
           Home
         </NavLink>
       </Typography>
