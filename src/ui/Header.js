@@ -18,9 +18,23 @@ const Header =()=> {
   const handleProgramsMouseLeave = () => {
     setProgramsDropdownOpen(false);
   };
+const [staffDropdownOpen, setStaffDropdownOpen] = useState(false);
+     const handleStaffMouseEnter = () => {
+    setStaffDropdownOpen(true);
+  };
 
+  const handleStaffMouseLeave = () => {
+    setStaffDropdownOpen(false);
+  };
   
- 
+ const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+     const handleAboutMouseEnter = () => {
+    setAboutDropdownOpen(true);
+  };
+
+  const handleAboutMouseLeave = () => {
+    setAboutDropdownOpen(false);
+  };
   React.useEffect(() => {
     window.addEventListener(
       "resize",
@@ -74,8 +88,8 @@ const Header =()=> {
 
      <div
         className="relative"
-        onMouseEnter={handleProgramsMouseEnter}
-        onMouseLeave={handleProgramsMouseLeave}
+        onMouseEnter={handleStaffMouseEnter}
+        onMouseLeave={handleStaffMouseLeave}
       >
         <Typography
           as="li"
@@ -85,7 +99,7 @@ const Header =()=> {
         >
           Staff Details
         </Typography>
-        {programsDropdownOpen && (
+        {staffDropdownOpen && (
           <ul className="absolute top-full z-20 mt-2 bg-white text-black shadow-lg p-2 rounded-lg w-40">
             <li className="hover:bg-primary hover:text-gray-400 p-2 rounded">
               <NavLink to="/Administrative">Administrator</NavLink>
@@ -130,8 +144,8 @@ const Header =()=> {
       </Typography>
       <div
         className="relative"
-        onMouseEnter={handleProgramsMouseEnter}
-        onMouseLeave={handleProgramsMouseLeave}
+        onMouseEnter={handleAboutMouseEnter}
+        onMouseLeave={handleAboutMouseLeave}
       >
         <Typography
           as="li"
@@ -141,7 +155,7 @@ const Header =()=> {
         >
           About
         </Typography>
-        {programsDropdownOpen && (
+        {aboutDropdownOpen && (
           <ul className="absolute top-full z-20 mt-2 bg-white text-black shadow-lg p-2 rounded-lg w-40">
             <li className="hover:bg-primary hover:text-gray-400 p-2 rounded">
               <NavLink to="/Principal">Principal Message</NavLink>
