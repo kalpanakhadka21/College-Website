@@ -102,7 +102,7 @@ const Footer=()=> {
         </div>
         
       </div>
-      <div className="bg-white mt-5 p-2  flex font-bold text-black">
+      <div className="bg-white mt-5 p-2  flex font-bold text-black ">
           <marquee>सिपमुलक शिक्षा पढौं,आत्मनिर्भर बनौं।।</marquee>
           <marquee>प्राविधिक शिक्षा आाजको आवश्यक्ता।।</marquee>
           <marquee>सिप सिकौं,रोजगारी बनौं।।</marquee>
